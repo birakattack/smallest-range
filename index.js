@@ -1,13 +1,13 @@
 var _ = require('underscore'),
     MinHeap = require('min-heap');
 
-var rangeList = [
+var lists = [
                   [3,9,14,23,27],
                   [1,10,13,21],
                   [4,18,22,31]
                 ];
 
-function smallestRange() {
+function smallestRange(rangeList) {
   var heap = new MinHeap(function(l,r) {
     return l.value - r.value;
   });
@@ -45,4 +45,4 @@ function smallestRange() {
   }
 }
 
-smallestRange();
+smallestRange(lists);
