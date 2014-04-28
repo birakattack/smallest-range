@@ -1,9 +1,8 @@
-var async = require('async'),
-    _ = require('underscore'),
+var _ = require('underscore'),
     MinHeap = require('min-heap');
 
 var rangeList = [
-                  [3,14,23,27],
+                  [3,9,14,23,27],
                   [1,10,13,21],
                   [4,18,22,31]
                 ];
@@ -25,8 +24,7 @@ function smallestRange() {
     heap.insert({value: initData, listNum: i});
   }
 
-  var complete = false;
-  while(!complete) {
+  while(true) {
     var headElement = heap.removeHead();
     var testRange = maxValue - headElement.value + 1;
 

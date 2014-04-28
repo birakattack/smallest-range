@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "min-heap": "~0.2.3",
-    "async": "~0.7.0",
     "underscore": "~1.6.0"
   }
 }
